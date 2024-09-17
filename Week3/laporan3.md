@@ -1,3 +1,7 @@
+Nama : Eka Krisna Ferian
+NIM : 2241720100
+Kelas : TI-3D
+
 **Praktikum 1: Menerapkan Control Flows ("if/else")**
 
 Langkah 1:
