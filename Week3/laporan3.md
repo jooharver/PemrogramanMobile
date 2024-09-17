@@ -121,6 +121,7 @@ Jawab :
 ![Gambar 1](img/Picture19.jpg)
 
 Hasil:
+![Gambar 1](img/Picture21.jpg)
 ![Gambar 1](img/Picture20.jpg)
 
 keterangan: dari angka 0-201 hasilnya akan menampilkan bilangan prima mulai dari 2 sampai 199.
