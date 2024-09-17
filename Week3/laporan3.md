@@ -110,5 +110,24 @@ Perbaikan:
 Hasil:
 ![Gambar 1](img/Picture15.jpg)
 
+Tugas Praktikum
+
+    Silakan selesaikan Praktikum 1 sampai 3, lalu dokumentasikan berupa screenshot hasil pekerjaan beserta penjelasannya!
+    Buatlah sebuah program yang dapat menampilkan bilangan prima dari angka 0 sampai 201 menggunakan Dart. Ketika bilangan prima ditemukan, maka tampilkan nama lengkap dan NIM Anda.
+    Kumpulkan berupa link commit repo GitHub pada tautan yang telah disediakan di grup Telegram!
+
+
+Jawab :
+![Gambar 1](img/Picture19.jpg)
+
+Hasil:
+![Gambar 1](img/Picture20.jpg)
+
+keterangan: dari angka 0-201 hasilnya akan menampilkan bilangan prima mulai dari 2 sampai 199.
+
+
+
+
+
 
 
