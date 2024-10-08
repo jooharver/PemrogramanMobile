@@ -1,54 +1,26 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    // Warna tombol diambil dari warna tema utama aplikasi
     Color color = Theme.of(context).primaryColor;
 
-    // Membuat titleSection
+    // Widget titleSection untuk menampilkan judul
     Widget titleSection = Container(
       padding: const EdgeInsets.all(32),
-      child: Row(
-        children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  padding: const EdgeInsets.only(bottom: 8),
-                  child: const Text(
-                    'Wisata Gunung di Batu',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                const Text(
-                  'Batu, Malang, Indonesia',
-                  style: TextStyle(
-                    color: Colors.grey,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const Icon(
-            Icons.star,
-            color: Colors.red,
-          ),
-          const Text('41'),
-        ],
+      child: Text(
+        'Taman Langit Gunung Banyak',
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
 
-    // Membuat buttonSection
+    // Widget buttonSection untuk menampilkan tombol-tombol
     Widget buttonSection = Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
@@ -58,11 +30,11 @@ class MyApp extends StatelessWidget {
       ],
     );
 
-    // Membuat textSection
+    // Widget textSection untuk menampilkan teks deskripsi
     Widget textSection = Container(
       padding: const EdgeInsets.all(32),
       child: const Text(
-        'Nama : Eka Krisna Ferian\n\n' 
+        'Nama : Eka Krisna Ferian\n\n'
         'NIM : 2241720100\n\n'
         'Taman Langit Gunung Banyak di Batu adalah destinasi wisata '
         'yang menawarkan keindahan alam pegunungan yang menakjubkan. '
@@ -80,38 +52,51 @@ class MyApp extends StatelessWidget {
       ),
     );
 
+    // Widget imageSection untuk menampilkan gambar
+    Widget imageSection = Container(
+      padding: const EdgeInsets.all(32),
+      child: Image.asset(
+        'assets/tamanlangit.png', // Menggunakan gambar yang Anda sebutkan
+        width: 200,
+        height: 250,
+        fit: BoxFit.cover, // Mengatur agar gambar mencakup seluruh box dengan rasio aspek yang tepat
+      ),
+    );
+
     return MaterialApp(
-      title: 'Flutter Layout Demo',
+      title: 'Flutter layout demo',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Flutter Layout Demo'),
+          title: const Text('Flutter layout demo'),
         ),
-        body: Column(
+        // Mengganti Column dengan ListView agar dapat di-scroll pada perangkat resolusi kecil
+        body: ListView(
           children: [
+            imageSection, // Gambar dimasukkan di sini
             titleSection,
-            buttonSection, // Menambahkan buttonSection ke dalam body
-            textSection, // Menambahkan textSection ke dalam body
+            buttonSection,
+            textSection,
           ],
         ),
       ),
     );
   }
 
-  // Method _buildButtonColumn untuk membuat kolom dengan ikon dan teks
+  // Fungsi untuk membuat kolom button dengan icon dan label
   Column _buildButtonColumn(Color color, IconData icon, String label) {
     return Column(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(icon, color: color), // Ikon dengan warna sesuai parameter
+        Icon(icon, color: color),
         Container(
-          margin: const EdgeInsets.only(top: 8), // Margin atas sebesar 8
+          margin: const EdgeInsets.only(top: 8),
           child: Text(
-            label, // Teks untuk kolom
+            label,
             style: TextStyle(
-              fontSize: 12, // Ukuran teks
-              fontWeight: FontWeight.w400, // Berat font reguler
-              color: color, // Warna teks sama dengan ikon
+              fontSize: 12,
+              fontWeight: FontWeight.w400,
+              color: color,
             ),
           ),
         ),
