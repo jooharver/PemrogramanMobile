@@ -58,6 +58,28 @@ class MyApp extends StatelessWidget {
       ],
     );
 
+    // Membuat textSection
+    Widget textSection = Container(
+      padding: const EdgeInsets.all(32),
+      child: const Text(
+        'Nama : Eka Krisna Ferian\n\n' 
+        'NIM : 2241720100\n\n'
+        'Taman Langit Gunung Banyak di Batu adalah destinasi wisata '
+        'yang menawarkan keindahan alam pegunungan yang menakjubkan. '
+        'Terletak di ketinggian, taman ini memberikan pemandangan '
+        'spektakuler kota Batu dan sekitarnya, terutama saat matahari '
+        'terbenam. Pengunjung dapat menikmati berbagai aktivitas '
+        'seperti berfoto di spot-spot Instagramable, berjalan-jalan '
+        'di antara taman yang indah, dan merasakan udara segar '
+        'pegunungan. Taman ini juga dilengkapi dengan fasilitas '
+        'yang nyaman, menjadikannya tempat yang ideal untuk bersantai '
+        'dan menikmati alam bersama keluarga dan teman. Taman Langit '
+        'Gunung Banyak merupakan pilihan tepat bagi para pencinta '
+        'alam dan penggemar fotografi.',
+        softWrap: true,
+      ),
+    );
+
     return MaterialApp(
       title: 'Flutter Layout Demo',
       home: Scaffold(
@@ -68,6 +90,7 @@ class MyApp extends StatelessWidget {
           children: [
             titleSection,
             buttonSection, // Menambahkan buttonSection ke dalam body
+            textSection, // Menambahkan textSection ke dalam body
           ],
         ),
       ),
